@@ -1,0 +1,47 @@
+data:
+  raw:
+    manuscripts: "./data/raw/manuscripts"
+  processed:
+    images: "./data/processed/images"
+    lines: "./data/processed/lines"
+    characters: "./data/processed/characters"
+  labeled:
+    train: "./data/labeled/train"
+    test: "./data/labeled/test"
+
+tools:
+  annotation_tool: "./tools/annotation_tool.py"
+  pdf_to_image: "./tools/pdf_to_image.py"
+  segmentation: "./tools/segmentation.py"
+  augmentation: "./tools/augmentation.py"
+
+models:
+  traditional_cv:
+    feature_extraction: "./models/traditional_cv/feature_extraction.py"
+  deep_learning:
+    simple_cnn: "./models/deep_learning/simple_cnn.py"
+
+experiments:
+  baseline_ocr_test: "./experiments/baseline_ocr_test.py"
+  results: "./experiments/results"
+
+notebooks:
+  exploration: "./notebooks/exploration.ipynb"
+
+requirements: "./requirements.txt"
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  augmentation:
+    rotation: [-5, 5]
+    scaling: [0.9, 1.1]
+    noise: true
+    blur: true
+    brightness_contrast: true
+    elastic_transform: true
+
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1_score"]
+  test_size: 0.2
