@@ -13,3 +13,13 @@ imgaug
 seaborn
 jupyter
 notebook
+pdf2image
+pytesseract
+scipy
+transformers
+indic-nlp-library
+sentence-transformers
+pysolr
+flask
+scikit-image
+scipy
